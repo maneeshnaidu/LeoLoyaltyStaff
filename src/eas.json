@@ -7,21 +7,15 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
-      "ios": {
-        "bundleIdentifier": "com.leoloyalty.staff.dev"
-      }
+      "channel": "development"
     },
     "preview": {
       "distribution": "internal",
-      "ios": {
-        "bundleIdentifier": "com.leoloyalty.staff.preview"
-      }
+      "channel": "preview"
     },
     "production": {
       "autoIncrement": true,
-      "ios": {
-        "bundleIdentifier": "com.leoloyalty.staff.production"
-      }
+      "channel": "production"
     }
   },
   "submit": {

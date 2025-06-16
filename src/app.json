@@ -9,7 +9,11 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.leoloyalty.staff",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +21,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.azarotech.leoloyaltystaff"
+      "package": "com.leoloyalty.staff"
     },
     "web": {
       "bundler": "metro",
@@ -45,6 +49,12 @@
         "projectId": "b9a3aea3-712e-4cdf-99ae-17f89433b8c5"
       }
     },
-    "owner": "azarotech"
+    "owner": "azarotech",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b9a3aea3-712e-4cdf-99ae-17f89433b8c5"
+    }
   }
 }
