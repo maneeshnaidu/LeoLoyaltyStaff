@@ -8,19 +8,19 @@
       "developmentClient": true,
       "distribution": "internal",
       "ios": {
-        "bundleIdentifier": "com.leoloyalty.staff"
+        "bundleIdentifier": "com.leoloyalty.staff.dev"
       }
     },
     "preview": {
       "distribution": "internal",
       "ios": {
-        "bundleIdentifier": "com.leoloyalty.staff"
+        "bundleIdentifier": "com.leoloyalty.staff.preview"
       }
     },
     "production": {
       "autoIncrement": true,
       "ios": {
-        "bundleIdentifier": "com.leoloyalty.staff"
+        "bundleIdentifier": "com.leoloyalty.staff.production"
       }
     }
   },

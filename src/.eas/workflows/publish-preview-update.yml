@@ -2,11 +2,11 @@ name: Publish preview update
 
 on:
   push:
-    branches: ['main']
+    branches: ['*']
 
 jobs:
   publish_preview_update:
     name: Publish preview update
     type: update
     params:
-      branch: ${{ github.ref_name || 'main' }}
+      branch: ${{ github.ref_name || 'test' }}
