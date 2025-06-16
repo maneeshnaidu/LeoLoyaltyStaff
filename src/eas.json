@@ -1,0 +1,30 @@
+{
+  "cli": {
+    "version": ">= 16.10.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "bundleIdentifier": "com.leoloyalty.staff"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "bundleIdentifier": "com.leoloyalty.staff"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "ios": {
+        "bundleIdentifier": "com.leoloyalty.staff"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
