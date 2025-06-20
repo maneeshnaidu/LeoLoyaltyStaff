@@ -27,14 +27,14 @@ export interface CartItemType {
   image: string;
 }
 
-export interface NotificationType {
-  id: number;
-  customer: string;
-  orderNumber: string;
-  points: number;
-  transactionType: string;
-  outletAddress: string;
-  createdOn: Date | string;
+export interface TransactionType {
+  id: number,
+  customer: string,
+  orderNumber: string,
+  outletAddress: string,
+  points: number,
+  transactionType: string,
+  createdOn: Date
 }
 
 export interface VendorType {
@@ -66,7 +66,7 @@ export interface LoyaltyCardType {
 }
 
 export interface QueryObject {
-  role?: string,
+  role?: string[],
   userCode?: number,
   vendorId?: number,
   outletId?: number,
@@ -78,10 +78,13 @@ export interface QueryObject {
 }
 
 export interface RewardType {
-  id: string;
+  id: number;
+  vendorId: number;
   title: string;
+  pointsRequired: number;
   description: string;
-  expiryDate?: string;
+  isActive: boolean;
+  expiryDate?: Date | string;
 }
 
 export type UpdatePointsDto = {

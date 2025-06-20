@@ -1,5 +1,6 @@
 import { Colors } from '@/constants/Colors'
-import { useNotifications } from '@/hooks/useNotifications'
+import { useTransactions } from '@/hooks/useTransactions'
+import { useAuthStore } from '@/store/auth'
 import { Ionicons } from '@expo/vector-icons'
 import { useHeaderHeight } from '@react-navigation/elements'
 import { Stack } from 'expo-router'
@@ -8,7 +9,8 @@ import { ActivityIndicator, FlatList, StyleSheet, Text, View } from 'react-nativ
 import Animated, { FadeInDown } from 'react-native-reanimated'
 
 const NotificationsScreen = () => {
-  const { notifications, isLoading, error } = useNotifications();
+  const { user } = useAuthStore();
+  const { data: transactions, isLoading, error } = useTransactions({ role: user?.roles, userCode: user?.userCode});
   const headerHeight = useHeaderHeight();
 
   if (isLoading) {
@@ -35,7 +37,7 @@ const NotificationsScreen = () => {
       }} />
       <View style={[styles.container, { marginTop: headerHeight }]}>
         <FlatList
-          data={notifications}
+          data={transactions}
           keyExtractor={item => item.id.toString()}
           showsVerticalScrollIndicator={false}
           renderItem={({ item, index }) => (
